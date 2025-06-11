@@ -32,7 +32,7 @@ Nenhuma instalação adicional é necessária, pois é um projeto 100% front-end
 ## 💡 Aprendizados
 Esse projeto foi minha primeira experiência utilizando o Tailwind CSS, e me ajudou a entender sua abordagem utilitária para estilização. Também foi uma ótima forma de praticar lógica com JavaScript e trabalhar com armazenamento local (localStorage) para manter os dados salvos no navegador.
 
-## 🧼 Observação
+## 📌 Observação
 O histórico de senhas é salvo automaticamente no navegador e permanece mesmo após fechá-lo. O histórico só será apagado caso o usuário clique em "Clear History".
 
 📄 Licença
