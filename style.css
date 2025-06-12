@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Poppins:wght@300;400;500;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: #eeb35c;
+  --pink: #f498d7;
+  --dark: #111827;
+  --darker: #050505;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--dark);
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 2rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Orbitron', sans-serif;
+  color: var(--orange);
+}
+
+.container {
+  max-width: 1000px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.password-display {
+  background-color: var(--darker);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.password-text {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-generate {
+  background-color: var(--orange);
+  color: var(--dark);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-generate:hover {
+  background-color: var(--pink);
+  box-shadow: 0 0 15px var(--pink);
+  transform: translateY(-2px);
+}
+
+.btn-copy {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-copy:hover {
+  background-color: var(--pink);
+  color: var(--dark);
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: #4a5568;
+  border-radius: 5px;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--pink);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: var(--orange);
+  box-shadow: 0 0 10px var(--orange);
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--pink);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.slider::-moz-range-thumb:hover {
+  background: var(--orange);
+  box-shadow: 0 0 10px var(--orange);
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox:checked {
+  background-color: var(--pink);
+}
+
+.custom-checkbox:checked:after {
+  content: '✓';
+  position: absolute;
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox-label {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.custom-checkbox:checked+.checkbox-label {
+  color: var(--pink);
+}
+
+.history-section {
+  background-color: var(--darker);
+  border: 2px solid var(--pink);
+  border-radius: 0.5rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.history-container h3 {
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  transform: translateY(-2px);
+}
+
+.history-entry {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.2s ease;
+}
+
+.history-entry:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.btn-clear-history {
+  color: var(--orange);
+  transition: color 0.2s ease;
+}
+
+.btn-clear-history:hover {
+  color: var(--pink);
+  text-shadow: 0 0 5px var(--pink);
+}
+
+@media (min-width: 768px) {
+  .grid-area {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.futuristic-border {
+  position: relative;
+}
+
+.futuristic-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, var(--pink), transparent, var(--orange));
+  border-radius: 0.75rem;
+  z-index: -1;
+  opacity: 0.7;
+  animation: borderGlow 3s infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.history-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.history-section::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+.history-section::-webkit-scrollbar-thumb {
+  background: var(--pink);
+  border-radius: 4px;
+}
+
+.history-section::-webkit-scrollbar-thumb:hover {
+  background: var(--orange);
+}

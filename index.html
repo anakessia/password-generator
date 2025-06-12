@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>Password Generator</title>
+</head>
+
+<body class="bg-dark text-white min-h-screen flex items-center justify-center">
+
+    <div class="container mx-auto px-4">
+        <h1 class="title text-center text-3xl md:text-4xl font-bold mb-8">PASSWORD GENERATOR</h1>
+
+        <div class="grid-area grid grid-cols-1 md:grid-cols-[1fr_350px] gap-y-6 md:gap-16">
+
+            <div class="controls-section">
+
+                <div class="password-display futuristic-border mb-8 p-1">
+                    <div class="flex bg-gray-900 rounded-md">
+                        <div id="passwordDisplay" class="password-text flex-grow p-4 text-white text-lg">No password yet
+                        </div>
+                        <button id="copyBtn" class="btn-copy px-4 rounded-r-md flex items-center justify-center"
+                            title="Copy to clipboard">
+                            <i class="far fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <label for="passwordLength" class="text-white font-medium">Password Length</label>
+                        <span id="lengthValue" class="px-3 py-1 bg-opacity-20 bg-white rounded text-white">12</span>
+                    </div>
+                    <input type="range" id="passwordLength" class="slider w-full" min="6" max="20" value="12">
+                </div>
+
+                <div class="mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="uppercase" class="custom-checkbox" checked>
+                        <label for="uppercase" class="checkbox-label">Uppercase Letters</label>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="lowercase" class="custom-checkbox" checked>
+                        <label for="lowercase" class="checkbox-label">Lowercase Letters</label>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="numbers" class="custom-checkbox" checked>
+                        <label for="numbers" class="checkbox-label">Numbers</label>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="symbols" class="custom-checkbox" checked>
+                        <label for="symbols" class="checkbox-label">Symbols</label>
+                    </div>
+                </div>
+
+                <button id="generateBtn"
+                    class="btn-generate w-full py-3 rounded-lg font-medium text-lg mb-6 flex items-center justify-center">
+                    <i class="fas fa-bolt mr-2 text-base"></i> Generate
+                </button>
+            </div>
+
+            <div class="display-history-section">
+
+                <div class="history-container">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-white font-medium">Password History</h3>
+                        <button id="clearHistoryBtn" class="btn-clear-history text-sm">Clear History</button>
+                    </div>
+
+                    <div id="historySection" class="history-section p-2">
+                        <div class="text-gray-500 text-center py-6">No history yet</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/main.js"></script>
+
+</body>
+
+</html>
