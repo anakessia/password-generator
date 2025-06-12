@@ -36,7 +36,10 @@ Nenhuma instalação adicional é necessária, pois é um projeto 100% front-end
 Esse projeto foi minha primeira experiência utilizando o Tailwind CSS, e me ajudou a entender sua abordagem utilitária para estilização. Também foi uma ótima forma de praticar lógica com JavaScript e trabalhar com armazenamento local (localStorage) para manter os dados salvos no navegador.
 
 ## 📌 Observação
-O histórico de senhas é salvo automaticamente no navegador e permanece mesmo após fechá-lo. O histórico só será apagado caso o usuário clique em "Clear History".
+<p>Este projeto utiliza o Tailwind CSS v2.2.19 (via CDN).</p>
+O objetivo foi explorar os fundamentos do framework e entender sua aplicação prática em projetos reais.
+
+Em breve, uma nova versão será criada utilizando o Tailwind CSS mais recente para experimentar os recursos modernos da biblioteca.
 
 📄 Licença
 Este projeto está sob a licença MIT. Fique à vontade para usar, modificar e compartilhar.
