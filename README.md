@@ -13,11 +13,14 @@
 
 ## 📦 Tecnologias utilizadas
 
-- HTML5
+- HTML
+- CSS
 - JavaScript
 - Tailwind CSS
 
 ## 📸 Preview
+![Screenshot do projeto](password-generator.png)
+
 
 ## 🚀 Como usar
 
