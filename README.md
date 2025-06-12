@@ -19,7 +19,7 @@
 - Tailwind CSS
 
 ## 📸 Preview
-![Screenshot do projeto](Password-Generator.png)
+![Screenshot do projeto](password-generator.png)
 
 
 ## 🚀 Como usar
